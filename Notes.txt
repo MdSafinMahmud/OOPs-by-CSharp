@@ -3,4 +3,11 @@ For C# variables:
 2.camelCase
 3.Meaningful
 4. Avoid Single character(most of the case)
-5. consisten
+5. consistent
+
+Implicit Automatic conversion
+int=>double
+char=> int=>long=>float=>double
+
+Explicit Manual conversion
+double=>float=>long=>int=>char

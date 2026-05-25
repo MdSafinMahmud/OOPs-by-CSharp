@@ -9,7 +9,7 @@ class Assignment
         int sold;
 
         phoneName = "Apple iphone 14";
-        prize = 320.0;
+        prize = 320.5;
         category = "Smartphone";
         available = true;
         sold = 5;

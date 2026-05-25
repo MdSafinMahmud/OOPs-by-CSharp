@@ -23,6 +23,6 @@ class UserInput
         Console.WriteLine("University Name: " + varsityName);
         Console.WriteLine("Student ID: " + stuID);
         Console.WriteLine("Program Name: " + programName);
-        Console.WriteLine("Registration done? " + isRegistered);
+        Console.WriteLine("Have you registerd? " + isRegistered);
     }
 }

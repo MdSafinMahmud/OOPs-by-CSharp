@@ -1,6 +1,6 @@
 using System;
 
-class userInput
+class UserInput
 {
     static void Main(string[] args)
     {
@@ -15,12 +15,14 @@ class userInput
         long stuID = long.Parse(Console.ReadLine() ?? "0");
         Console.Write("Enter your Program Name: ");
         string programName = Console.ReadLine() ?? string.Empty;
+        Console.Write("Are you registered? (true/false): ");
+        bool isRegistered = bool.TryParse(Console.ReadLine(), out bool registered) && registered;
         Console.WriteLine("\nHere is your information (Printed copy):");
-
         Console.WriteLine("Student Name: " + studentName);
         Console.WriteLine("Student Age: " + age);
         Console.WriteLine("University Name: " + varsityName);
         Console.WriteLine("Student ID: " + stuID);
         Console.WriteLine("Program Name: " + programName);
+        Console.WriteLine("Registration done? " + isRegistered);
     }
 }

@@ -1,0 +1,6 @@
+For C# variables:
+1.Descriptive
+2.camelCase
+3.Meaningful
+4. Avoid Single character(most of the case)
+5. consisten

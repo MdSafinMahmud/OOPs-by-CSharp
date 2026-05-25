@@ -12,7 +12,7 @@ class Variables
         Console.WriteLine("Name: "+ fullName);
         Console.WriteLine("Age: "+ age);
         Console.WriteLine("GPA: "+ gpa);
-        Console.WriteLine("Resisterd?:" + isResigterd);
+        Console.WriteLine("Resisterd?: "+ isResigterd);
         Console.WriteLine("Blood Group: "+ bloodGroup);
         
     }

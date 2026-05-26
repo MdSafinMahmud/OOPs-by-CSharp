@@ -15,7 +15,7 @@ class CalculatorProgram
             Console.WriteLine("4.Multiplication");
             Console.WriteLine("5.Exit");
 
-            Console.WriteLine("Choose an Option: ");
+            Console.Write("Choose an Option: ");
             int choice = Convert.ToInt32(Console.ReadLine());
 
             if (choice == 5)
@@ -24,9 +24,9 @@ class CalculatorProgram
                 running = false;
                 break;
             }
-            Console.WriteLine("Enter number: ");
+            Console.Write("Enter number: ");
             double number1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter another number: ");
+            Console.Write("Enter another number: ");
             double number2 = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {

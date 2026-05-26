@@ -12,13 +12,14 @@ class CalculatorProgram
             Console.WriteLine("1.Addition");
             Console.WriteLine("2.Substraction");
             Console.WriteLine("3.Division");
-            Console.WriteLine("4.Multiplication");
-            Console.WriteLine("5.Exit");
+            Console.WriteLine("4.Reminder");
+            Console.WriteLine("5.Multiplication");
+            Console.WriteLine("6.Exit");
 
             Console.Write("Choose an Option: ");
             int choice = Convert.ToInt32(Console.ReadLine());
 
-            if (choice == 5)
+            if (choice == 6)
             {
                 Console.WriteLine("Calculator Closed. Good Bye...");
                 running = false;
@@ -40,8 +41,12 @@ class CalculatorProgram
                     Console.WriteLine("Result= " + (number1 / number2));
                     break;
                 case 4:
+                    Console.WriteLine("Result= " + (number1 % number2));
+                    break;
+                case 5:
                     Console.WriteLine("Result= " + (number1 * number2));
                     break;
+
                 default:
                     Console.WriteLine("Please INPUT numbers not words!");
                     break;

@@ -79,12 +79,12 @@ class Program
         string data = File.ReadAllText(filePath);
         string[] parts = data.Split(',');
         string savedUsername = parts[0];
-        Console.WriteLine("Enter your username: ");
+        Console.Write("Enter your username: ");
         string username = Console.ReadLine()!;
 
         if (username == savedUsername)
         {
-            Console.WriteLine("Enter new password ");
+            Console.Write("Enter new password ");
             string newPassword = Console.ReadLine()!;
             File.WriteAllText(filePath, username + "," + newPassword);
             Console.WriteLine("Password reset Successfull");

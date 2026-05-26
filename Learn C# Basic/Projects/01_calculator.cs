@@ -22,7 +22,6 @@ class CalculatorProgram
             if (choice == 6)
             {
                 Console.WriteLine("Calculator Closed. Good Bye...");
-                running = false;
                 break;
             }
             Console.Write("Enter number: ");

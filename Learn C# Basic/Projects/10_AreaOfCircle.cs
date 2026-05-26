@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics;
-
 class Program
 {
     static void Main(string[] args)
@@ -14,7 +13,6 @@ class Program
             Console.WriteLine("3.Square");
             Console.WriteLine("4.Rectangle");
             Console.WriteLine("5.Exit");
-
             Console.Write("Choose an option ");
             int choice = int.Parse(Console.ReadLine()!);
             if (choice == 5)
@@ -22,7 +20,6 @@ class Program
                 Console.WriteLine("Exiting calculator...");
                 break;
             }
-
             switch (choice)
             {
                 case 1:
@@ -61,7 +58,6 @@ class Program
                     Console.WriteLine("Please input Number.");
                     break;
             }
-
         }
     }
 }

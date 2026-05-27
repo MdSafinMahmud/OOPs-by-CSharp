@@ -27,7 +27,7 @@ class CalculatorProgram
             Console.Write("Enter number: ");
             double number1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter another number: ");
-            double number2 = Convert.ToInt32(Console.ReadLine());
+            double number2 = Convert.ToInt32(Console.ReadLine()!);
             switch (choice)
             {
                 case 1:

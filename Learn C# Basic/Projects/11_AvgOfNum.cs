@@ -145,6 +145,8 @@ class Program
                     avg8 = (t3 + u3 + v3 + w3 + x4 + y4 + z3 + a3 + b2 + c1) / 10;
                     Console.Write("The average is: " + avg8);
                     break;
+                default:
+                    Console.WriteLine("Please Enter only numbers");
             }
         }
     }

@@ -11,7 +11,6 @@ class Program
         Console.WriteLine("1. Register");
         Console.WriteLine("2. Log in");
         Console.WriteLine("3. Password Reset");
-
         Console.Write("Choose an option: ");
         int choice = Convert.ToInt32(Console.ReadLine()!);
         switch (choice)
@@ -66,7 +65,6 @@ class Program
         else
         {
             Console.WriteLine("Wrong Username or Password");
-
         }
     }
     static void ResetPassword()
@@ -84,7 +82,7 @@ class Program
 
         if (username == savedUsername)
         {
-            Console.Write("Enter new password ");
+            Console.Write("Enter new password: ");
             string newPassword = Console.ReadLine()!;
             File.WriteAllText(filePath, username + "," + newPassword);
             Console.WriteLine("Password reset Successfull");

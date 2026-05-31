@@ -3,11 +3,9 @@ using System;
 class Program
 {
     static string filePath = "user.txt";
-
     static void Main(string[] args)
     {
         bool running = true;
-
         while (running)
         {
             Console.WriteLine("\n===== ATM MENU =====");
@@ -15,10 +13,8 @@ class Program
             Console.WriteLine("2. Login");
             Console.WriteLine("3. Password Reset");
             Console.WriteLine("4. Exit");
-
             Console.Write("Choose option: ");
             int choice = Convert.ToInt32(Console.ReadLine());
-
             switch (choice)
             {
                 case 1:
@@ -44,20 +40,15 @@ class Program
             }
         }
     }
-
     static void Register()
     {
         Console.Write("Enter username: ");
         string username = Console.ReadLine()!;
-
         Console.Write("Enter password: ");
         string password = Console.ReadLine()!;
-
         File.WriteAllText(filePath, username + "," + password);
-
         Console.WriteLine("Registration Successful!");
     }
-
     static void Login()
     {
         if (!File.Exists(filePath))
@@ -65,19 +56,14 @@ class Program
             Console.WriteLine("No user found. Please register first.");
             return;
         }
-
         string data = File.ReadAllText(filePath);
         string[] parts = data.Split(',');
-
         string savedUsername = parts[0];
         string savedPassword = parts[1];
-
         Console.Write("Enter username: ");
         string username = Console.ReadLine()!;
-
         Console.Write("Enter password: ");
         string password = Console.ReadLine()!;
-
         if (username == savedUsername && password == savedPassword)
         {
             Console.WriteLine("Login Successful!");
@@ -89,7 +75,6 @@ class Program
             Console.WriteLine("Wrong username or password!");
         }
     }
-
     static void PassReset()
     {
         if (!File.Exists(filePath))
@@ -97,15 +82,11 @@ class Program
             Console.WriteLine("No account found!");
             return;
         }
-
         string data = File.ReadAllText(filePath);
         string[] parts = data.Split(',');
-
         string savedUsername = parts[0];
-
         Console.Write("Enter your username: ");
         string username = Console.ReadLine()!;
-
         if (username == savedUsername)
         {
             Console.Write("Enter new password: ");
@@ -120,12 +101,10 @@ class Program
             Console.WriteLine("Username not found!");
         }
     }
-
     static void ATMMenu()
     {
         bool loggedIn = true;
         double balance = 1000;
-
         while (loggedIn)
         {
             Console.WriteLine("\nATM MENU");
@@ -133,16 +112,13 @@ class Program
             Console.WriteLine("2. Deposit");
             Console.WriteLine("3. Withdraw");
             Console.WriteLine("4. Logout");
-
             Console.Write("Choose option: ");
             int choice = Convert.ToInt32(Console.ReadLine());
-
             switch (choice)
             {
                 case 1:
                     Console.WriteLine("Current Balance: " + balance + " TK");
                     break;
-
                 case 2:
                     Console.Write("Enter deposit amount: ");
                     double deposit = Convert.ToDouble(Console.ReadLine());
@@ -160,7 +136,6 @@ class Program
                     }
 
                     break;
-
                 case 3:
                     Console.Write("Enter withdraw amount: ");
                     double withdraw = Convert.ToDouble(Console.ReadLine());
@@ -180,9 +155,7 @@ class Program
                         Console.WriteLine("Withdraw Successful!");
                         Console.WriteLine("Remaining Balance: " + balance + " TK");
                     }
-
                     break;
-
                 case 4:
                     loggedIn = false;
                     Console.WriteLine("Logout Successful!");

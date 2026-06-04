@@ -8,7 +8,7 @@ class Program
         bool running = true;
         while (running)
         {
-            Console.WriteLine("\n===== ATM MENU =====");
+            Console.WriteLine("\nATM MENU...");
             Console.WriteLine("1. Register");
             Console.WriteLine("2. Login");
             Console.WriteLine("3. Password Reset");

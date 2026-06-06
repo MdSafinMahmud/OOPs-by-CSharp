@@ -1,19 +1,33 @@
 using System;
+using System.Drawing;
+using System.Threading;
 
 class Program
 {
+    static void AetherReply(string reply)
+    {
+        Console.Write("Aether is typing");
+        for (int i = 0; i < 3; i++)
+        {
+            Thread.Sleep(500);
+            Console.Write(".");
+        }
+        Console.WriteLine();
+        Console.WriteLine($"Aether:{reply}");
+    }
+
     static void Main(string[] args)
     {
         Console.WriteLine("Simple Chat Box: ");
-        Console.WriteLine("Type 'exit' to close chat.");
+        Console.WriteLine("Type 'Good Bye' to close chat.");
         while (true)
         {
             Console.Write("\nYou: ");
             string message = Console.ReadLine()!;
-            if (message.Equals("exit", StringComparison.CurrentCulture
+            if (message.Equals("good bye", StringComparison.CurrentCulture
             ))
             {
-                Console.WriteLine("Good Bye :)");
+                AetherReply("Good Bye :)");
                 break;
             }
             else if (
@@ -21,153 +35,156 @@ class Program
     || message.Equals("hi", StringComparison.CurrentCultureIgnoreCase)
 )
             {
-                Console.WriteLine("Aether: Hi, I am Aether. What can I help you with?");
+                AetherReply("Hi, I am Aether. What can I help you with?");
             }
             else if (message.Equals("how are you?", StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: I am fine and you?");
+                AetherReply("I am fine and you?");
             }
             else if (message.Equals("how old are you?", StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: I am Aether,developed by Safin Mahmud.So,I haven't interseted this question.Thanks :)");
+                AetherReply("I am Aether,developed by Safin Mahmud.So,I haven't interseted this question.Thanks :)");
             }
             else if (message.Equals("do you love someone?", StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: OHH Man!, I have no feelings for humans");
+                AetherReply("OHH Man!, I have no feelings for humans");
             }
             else if (message.Equals("what is your name?", StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: My name is Aether,What can i Help you? ");
+                AetherReply("My name is Aether,What can i Help you? ");
             }
             else if (message.Equals("tell me about you", StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: My name is Aether and I am developed by Safin Mahmud ");
+                AetherReply("My name is Aether and I am developed by Safin Mahmud.");
             }
             else if (message.Equals("what's up?", StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Nothing much.");
+                AetherReply("Nothing much.");
             }
             else if (message.Equals("i have a question",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Yeah! Feel free to share. What is your question?");
+                AetherReply("Yeah! Feel free to share. What is your question?");
             }
             else if (message.Equals("what are your plans?",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether:I'm free today.");
+                AetherReply("I'm free today.");
             }
             else if (message.Equals("how was your day?",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Pretty good! I've been chatting with people all day.");
+                AetherReply("Pretty good! I've been chatting with people all day.");
             }
             else if (message.Equals("i am sad",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: I'm sorry to hear that. Want to talk about it?");
+                AetherReply("I'm sorry to hear that. Want to talk about it?");
             }
             else if (message.Equals("i am happy",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: That's great! What's making you happy?");
+                AetherReply("That's great! What's making you happy?");
             }
             else if (message.Equals("i am bored",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Maybe try a new game, movie, or coding project!");
+                AetherReply("Maybe try a new game, movie, or coding project!");
             }
             else if (message.Equals("what are you doing?",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Just waiting here to chat with you.");
+                AetherReply("Just waiting here to chat with you.");
             }
             else if (message.Equals("do you like me?",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Of course! I enjoy talking with you.");
+                AetherReply("Of course! I enjoy talking with you.");
             }
             else if (message.Equals("who created you?",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: I was created by Safin Mahmud.");
+                AetherReply("I was created by Safin Mahmud.");
             }
             else if (message.Equals("can you help me?",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: I'll do my best. What do you need help with?");
+                AetherReply("I'll do my best. What do you need help with?");
             }
             else if (message.Equals("i am tired",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Then maybe it's time for some rest and water.");
+                AetherReply("Then maybe it's time for some rest and water.");
             }
             else if (message.Equals("tell me a joke",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Why do programmers prefer dark mode? Because light attracts bugs!");
+                AetherReply("Why do programmers prefer dark mode? Because light attracts bugs!");
             }
             else if (message.Equals("do you sleep?",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Nope, I'm awake 24/7.");
+                AetherReply("Nope, I'm awake 24/7.");
             }
             else if (message.Equals("are you real?",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: I'm real software, but not a real human.");
+                AetherReply("I'm real software, but not a real human.");
             }
             else if (message.Equals("what is your favorite color?",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: I think blue looks pretty cool.");
+                AetherReply("I think blue looks pretty cool.");
             }
             else if (message.Equals("i miss someone",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Missing someone can be tough. Hope you get to talk to them soon.");
+                AetherReply("Missing someone can be tough. Hope you get to talk to them soon.");
             }
             else if (message.Equals("good afternoon",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Good afternoon! How's your day going?");
+                AetherReply("Good afternoon! How's your day going?");
             }
             else if (message.Equals("good evening",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Good evening! Nice to see you.");
+                AetherReply("Good evening! Nice to see you.");
             }
             else if (message.Equals("are you busy?",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Never too busy for a conversation.");
+                AetherReply("Never too busy for a conversation.");
             }
             else if (message.Equals("what can you do?",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: I can chat, answer questions, tell jokes, and keep you company.");
+                AetherReply("I can chat, answer questions, tell jokes, and keep you company.");
             }
             else if (message.Equals("i love coding",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: That's awesome! What language are you learning?");
+                AetherReply("That's awesome! What language are you learning?");
             }
             else if (message.Equals("c#",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Nice choice! C# is great for apps, games, and backend development.");
+                AetherReply("Nice choice! C# is great for apps, games, and backend development.");
+            }
+            else if (message.Equals("good morning",
+    StringComparison.CurrentCultureIgnoreCase))
+            {
+                AetherReply("ood morning dear!. What's your plan today?");
             }
             else if (message.Equals("good night",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Aether: Okay dear! goot night too");
+                AetherReply("Okay dear! goot night too");
             }
-
             else
             {
-                Console.WriteLine("I don't understand :( ");
+                AetherReply("I don't understand :( ");
             }
-
         }
     }
 }

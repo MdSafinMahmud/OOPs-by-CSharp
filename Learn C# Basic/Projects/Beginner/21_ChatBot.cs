@@ -1,5 +1,6 @@
 using System;
 using System.Threading;
+// using System.Speech.Synthesis;
 class Program
 {
     static string userName = "";
@@ -13,6 +14,7 @@ class Program
         }
         Console.WriteLine();
         Console.WriteLine($"Aether:{reply}");
+
     }
     static void Main(string[] args)
     {
@@ -37,6 +39,7 @@ class Program
 )
             {
                 AetherReply("Hi,I am Aether. What can I help you with?");
+
             }
             else if (message.Equals("how are you?", StringComparison.CurrentCultureIgnoreCase))
             {
@@ -46,6 +49,7 @@ class Program
             {
                 AetherReply("Sounds good!.What's your plan today?");
             }
+
             else if (message.Equals("how old are you?", StringComparison.CurrentCultureIgnoreCase))
             {
                 AetherReply("I am Aether,developed by Safin Mahmud.So,I haven't interseted this question.Thanks :)");
@@ -58,7 +62,7 @@ class Program
             {
                 AetherReply("My name is Aether,What can i Help you? ");
             }
-            else if (message.Equals("tell me about you", StringComparison.CurrentCultureIgnoreCase) || message.Equals("who are you?", StringComparison.CurrentCultureIgnoreCase))
+            else if (message.Equals("tell me about you", StringComparison.CurrentCultureIgnoreCase))
             {
                 AetherReply("My name is Aether and I am developed by Safin Mahmud.");
             }

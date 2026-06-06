@@ -1,25 +1,27 @@
 using System;
-using System.Drawing;
 using System.Threading;
-
 class Program
 {
+static string userName = "";
     static void AetherReply(string reply)
     {
         Console.Write("Aether is typing");
         for (int i = 0; i < 3; i++)
         {
-            Thread.Sleep(500);
+            Thread.Sleep(400);
             Console.Write(".");
         }
         Console.WriteLine();
         Console.WriteLine($"Aether:{reply}");
-    }
 
+    }
     static void Main(string[] args)
     {
-        Console.WriteLine("Simple Chat Box: ");
-        Console.WriteLine("Type 'Good Bye' to close chat.");
+        Console.WriteLine("\n\tHellow! I'm Aether :) \n\tYour personal ChatBOT.");
+        Console.WriteLine("\tPlease say good bye,When your task is complete.");
+        Console.WriteLine("\nWhat's your name?");
+        userName = Console.ReadLine()!;
+        Console.WriteLine("Hey "+ userName + ",whats'up");
         while (true)
         {
             Console.Write("\nYou: ");
@@ -27,7 +29,7 @@ class Program
             if (message.Equals("good bye", StringComparison.CurrentCulture
             ))
             {
-                AetherReply("Good Bye :)");
+                AetherReply("Good Bye :) Take care yourself...\n"+userName);
                 break;
             }
             else if (
@@ -35,12 +37,18 @@ class Program
     || message.Equals("hi", StringComparison.CurrentCultureIgnoreCase)
 )
             {
-                AetherReply("Hi, I am Aether. What can I help you with?");
+                AetherReply("Hi,I am Aether. What can I help you with?");
+                
             }
             else if (message.Equals("how are you?", StringComparison.CurrentCultureIgnoreCase))
             {
                 AetherReply("I am fine and you?");
             }
+            else if (message.Equals("i am fine", StringComparison.CurrentCultureIgnoreCase))
+            {
+                AetherReply("Sounds good!.What's your plan today?");
+            }
+
             else if (message.Equals("how old are you?", StringComparison.CurrentCultureIgnoreCase))
             {
                 AetherReply("I am Aether,developed by Safin Mahmud.So,I haven't interseted this question.Thanks :)");
@@ -57,7 +65,7 @@ class Program
             {
                 AetherReply("My name is Aether and I am developed by Safin Mahmud.");
             }
-            else if (message.Equals("what's up?", StringComparison.CurrentCultureIgnoreCase))
+            else if (message.Equals("whats up?", StringComparison.CurrentCultureIgnoreCase))
             {
                 AetherReply("Nothing much.");
             }
@@ -107,6 +115,7 @@ class Program
                 AetherReply("I was created by Safin Mahmud.");
             }
             else if (message.Equals("can you help me?",
+    StringComparison.CurrentCultureIgnoreCase)|| message.Equals("do you help me?",
     StringComparison.CurrentCultureIgnoreCase))
             {
                 AetherReply("I'll do my best. What do you need help with?");
@@ -174,12 +183,12 @@ class Program
             else if (message.Equals("good morning",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                AetherReply("ood morning dear!. What's your plan today?");
+                AetherReply("Good morning dear!. What's your plan today?");
             }
             else if (message.Equals("good night",
     StringComparison.CurrentCultureIgnoreCase))
             {
-                AetherReply("Okay dear! goot night too");
+                AetherReply("Okay dear! good night too");
             }
             else
             {

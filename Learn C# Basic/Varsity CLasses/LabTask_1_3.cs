@@ -10,6 +10,6 @@ class Program
         a = a + b;
         b = a - b;
         a = a - b;
-        Console.Write($"After swap: a={a},b={b}");
+        Console.Write($"After Swap: a={a},b={b}");
     }
 }

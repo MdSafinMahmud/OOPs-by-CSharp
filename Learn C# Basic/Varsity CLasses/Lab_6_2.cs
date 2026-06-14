@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] numbers = new int[10];
+        int sum = 0;
+        Console.WriteLine("Enter 10 elements: ");
+        for(int i = 0; i < 10; i++)
+        {
+            Console.WriteLine($"Elements:{i + 1}: ");
+            num
+        }
+    }
+}

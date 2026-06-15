@@ -7,10 +7,12 @@ class Program
         int[] numbers = new int[10];
         int sum = 0;
         Console.WriteLine("Enter 10 elements: ");
-        for(int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
         {
             Console.WriteLine($"Elements:{i + 1}: ");
-            num
+            numbers[i] = Convert.ToInt32(Console.ReadLine()!);
+            sum += numbers[i];
         }
+        Console.WriteLine($"Summation of all elements:{sum}");
     }
 }

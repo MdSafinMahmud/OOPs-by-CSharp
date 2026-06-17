@@ -16,7 +16,6 @@ class Program
                 }
             }
         }
-
         Console.WriteLine("Array in Ascending Order:");
 
         for (int i = 0; i < arr.Length; i++)

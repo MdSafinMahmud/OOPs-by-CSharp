@@ -5,7 +5,7 @@ class Student
     public int age;
     public void Study()
     {
-        Console.WriteLine(name + " is studiyng...");
+        Console.WriteLine($"{name} is studiyng...");
     }
     public void DisplayInfo()
     {

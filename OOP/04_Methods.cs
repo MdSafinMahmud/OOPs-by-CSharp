@@ -21,3 +21,9 @@ class Program
         myAccount.DisplayInfo();
     }
 }
+
+// public → Access Modifier
+// void   → Return Type
+// DisplayInfo → Method Name
+// ()     → Parameters
+// {}     → Method Body
